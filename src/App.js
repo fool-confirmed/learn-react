@@ -4,7 +4,7 @@ import Header from './component/static/header';
 import Footer from './component/static/footer';
 import Menu from './component/static/menu';
 import Topics from './component/static/topics';
-import UserEntry from './container/user-entry';
+import UserEntry from './container/funny-data-entry/user-entry';
 import ContactUs from './component/contact-us';
 import './App.css';
 
