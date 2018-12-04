@@ -2,9 +2,10 @@ import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import Header from './component/static/header';
 import Footer from './component/static/footer';
-import Menu from './component/static/menu';
+//import Menu from './component/static/menu';
 import Topics from './component/static/topics';
 import UserEntry from './container/funny-data-entry/user-entry';
+import FindRegExpMatches from './container/find-matches/find-matches';
 import ContactUs from './component/contact-us';
 import './App.css';
 
@@ -16,9 +17,17 @@ class App extends Component {
             
             <Header id='div-header' className='App-div-header'/>
             <div className='App-div-middle'>
-              <Menu id='div-menu' className='App-div-left' />
+    {/* <Menu id='div-menu' className='App-div-left' /> */}
+              <div id='div-menu' className='App-div-left'>
+                <ul>
+                  <li><Link to='/'>Home</Link></li>
+                  <li><Link to='/find-matches'>Find Matches</Link></li>
+                  <li><Link to='/contact-us'>Contact Us</Link></li>
+                </ul>                
+              </div>
               <div className='App-div-center'>
                 <Route path='/' exact component={UserEntry} />
+                <Route path='/find-matches' component={FindRegExpMatches} />
                 <Route path='/contact-us' component={ContactUs} />
               </div>
               

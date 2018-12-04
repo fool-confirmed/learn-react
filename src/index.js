@@ -5,10 +5,9 @@ import { createStore } from 'redux';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
-import { dataReduce } from './reducers/data-reduce';
-//import { addValue } from './actions/data-action'
+import appReducers from './reducers/app-reducers';
 
-const store = createStore(dataReduce);
+const store = createStore(appReducers);
 
 ReactDOM.render(
   <Provider store={store}>
@@ -22,7 +21,7 @@ ReactDOM.render(
 serviceWorker.unregister();
 
 
-// const unsubscribe = store.subscribe(()=>console.log(store.getState()));
+//const unsubscribe = store.subscribe(()=>console.log(store.getState()));
 // store.dispatch(addValue("111"));
 // store.dispatch(addValue("222"));
 // store.dispatch(addValue("111"));

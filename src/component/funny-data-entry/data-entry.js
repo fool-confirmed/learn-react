@@ -2,8 +2,7 @@ import React from 'react';
 //import PropTypes from 'prop-types';
 
 class DataEntry extends React.Component {
-  constructor(props) {
-    console.log(props);
+  constructor(props) {    
     super(props);
     this.state = {value: ""};
 

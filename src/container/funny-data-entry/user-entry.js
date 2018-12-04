@@ -3,12 +3,10 @@ import DataSection from '../../component/funny-data-entry/data-section';
 import { connect } from 'react-redux';
 
 const mapStateToProps = state => {
-  console.log("state");console.log(state);
-  return {search: state.search, list: state.list};
+  return {search: state.dataReduce.search, list: state.dataReduce.list};
 };
 
-const mapDispatchToProps = dispatch => {
-  console.log("dispatch");
+const mapDispatchToProps = dispatch => {  
   return {handleAdd: value => {dispatch(addValue(value));} }
 }
 
